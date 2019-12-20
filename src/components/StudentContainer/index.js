@@ -5,7 +5,7 @@ import Pager from "../common/Pager"
 export default function StudentContainer() {
     const [students, setStudents] = useState([])
     const [page, setPage] = useState(1)
-    const [limit, ] = useState(10)
+    const [limit, setLimit] = useState(10)
     const [total, setTotal] = useState(0)
     const [panelNumber, ] = useState(5)
     // 第二个参数空数组，让副作用函数仅在首次挂载时运行
@@ -31,6 +31,12 @@ export default function StudentContainer() {
         onPageChange={ newPage =>{
             //   console.log('??')
             setPage(newPage)
+        }}/>
+        每页显示的条数：
+        <input type="number"
+        value={limit}
+        onChange={e=> {
+            setLimit(e.target.value)
         }}/>
     </div>
   )

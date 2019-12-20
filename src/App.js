@@ -1,11 +1,13 @@
-import React from 'react';
-import StudentContainer from './components/StudentContainer'
+import React,{useState} from 'react';
+import useTimer from "./components/myHooks/useTimer"
+
+const ctx = React.createContext()
 
 function App() {
 
   return (
     <div>
-        <StudentContainer />
+
     </div>
   )
 }
